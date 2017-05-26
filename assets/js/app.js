@@ -35,12 +35,35 @@ function initMap(){
   }
 
   document.getElementById("encuentrame").addEventListener("click",buscar);
+
+  //input 4 4 2 2
+  var inputPartida = document.getElementById("input-partida");
+  var inputDestino = document.getElementById("input-destino");
+
+  new google.maps.places.Autocomplete(inputPartida);
+  new google.maps.places.Autocomplete(inputDestino);
+
+  var directionsService = new google.maps.DirectionsService;
+  var directionsDisplay = new google.maps.DirectionsRenderer;
+
+  var calculateAndDisplayRoute = function(directionsService, directionsDisplay){
+    directionsService.route({
+      origin: inputPartida.value,
+      destination: inputDestino.value,
+      travelMode: 'DRIVING'
+    }, function(response, status){
+      if (status === 'OK') {
+        directionsDisplay.setDirections(response);
+      } else {
+        window.alert("No encontramos una ruta.");
+      }
+    });
+  }
+
+  directionsDisplay.setMap(map);
+  var trazarRuta = function(){
+    calculateAndDisplayRoute(directionsService, directionsDisplay);
+  };
+
+  document.getElementById("trazar-ruta").addEventListener("click", trazarRuta);
 }
-
-//input 4 4 2 2
-
-var inputPartida = document.getElementById("punto-partida"),
-    inputPartida = document.getElementById("punto-destino");
-
-new google.maps.places.Autocomplete(inputPartida);
-new google.maps.places.Autocomplete(inputDestino);

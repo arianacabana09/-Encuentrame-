@@ -10,17 +10,20 @@
 </head>
 <body>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row relative">
       <form class="navbar-form" role="search">
-        <div class="form-group col-lg-5">
+        <div class="form-group col-lg-4">
           <span class="glyphicon glyphicon-record"></span>
-          <input id="input-partida"type="text" class="form-control input-sm" placeholder="Ingresa tu punto de partida">
+          <input id="input-partida" type="text" class="form-control input-sm" placeholder="Ingresa tu punto de partida">
         </div>
-        <div class="form-group col-lg-5">
+        <div class="form-group col-lg-4">
           <span class="glyphicon glyphicon-send"></span>
-          <input id="input-destino"type="text" class="form-control input-sm" placeholder="Ingresa tu Destino">
+          <input id="input-destino" type="text" class="form-control input-sm" placeholder="Ingresa tu Destino">
         </div>
-        <button type="submit" class="btn btn-default col-lg-2" id="encuentrame">ENCUENTRAME</button>
+        <div class="form-group col-lg-4">
+          <button type="button" class="btn btn-default" id="trazar-ruta">Trazar Ruta</button>
+          <button type="button" class="btn btn-default form-control" id="encuentrame">ENCUENTRAME</button>
+        </div>
       </form>
     </div>
   </div>
@@ -28,12 +31,9 @@
 
   </div>
 
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMW32VPlxybj__BvTKHC_OSM3QPZeh0CE&callback=initMap&libraries=places"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMW32VPlxybj__BvTKHC_OSM3QPZeh0CE&callback=initMap&libraries=places"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
-  <script type="text/javascript" src="assets/js/bootstrap.min.js">
-
-  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>
