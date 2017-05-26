@@ -10,27 +10,26 @@
 </head>
 <body>
   <div class="container-fluid">
-    <div class="row relative">
+    <div class="row">
       <form class="navbar-form" role="search">
-        <div class="form-group col-lg-4">
+        <div class="form-group col-lg-4 col-xs-12">
           <span class="glyphicon glyphicon-record"></span>
           <input id="input-partida" type="text" class="form-control input-sm" placeholder="Ingresa tu punto de partida">
         </div>
-        <div class="form-group col-lg-4">
+        <div class="form-group col-lg-4 col-xs-12">
           <span class="glyphicon glyphicon-send"></span>
           <input id="input-destino" type="text" class="form-control input-sm" placeholder="Ingresa tu Destino">
         </div>
-        <div class="form-group col-lg-4">
+        <div class="form-group col-lg-4 col-xs-12">
           <button type="button" class="btn btn-default" id="trazar-ruta">Trazar Ruta</button>
           <button type="button" class="btn btn-default form-control" id="encuentrame">ENCUENTRAME</button>
         </div>
       </form>
     </div>
   </div>
-  <div id="map">
 
-  </div>
-  <div id="tarifa">
+  <div id="map" class="col-lg-12"></div>
+  <div id="tarifa" class="col-lg-12">
 
   </div>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMW32VPlxybj__BvTKHC_OSM3QPZeh0CE&callback=initMap&libraries=places"></script>
