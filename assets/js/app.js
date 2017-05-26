@@ -47,7 +47,6 @@ function initMap(){
   var directionsDisplay = new google.maps.DirectionsRenderer;
 
   var tarifa = document.getElementById("tarifa");
-
   var calculateAndDisplayRoute = function(directionsService, directionsDisplay){
     directionsService.route({
       origin: inputPartida.value,
@@ -55,14 +54,14 @@ function initMap(){
       travelMode: 'DRIVING',
     }, function(response, status){
       if (status === 'OK') {
-        var distancia = Number((response.routes[0].legs[0].distance.text.replace("Km","")).replace(",","."));
-
+        var distancia = Number((response.routes[0].legs[0].distance.text.replace("km","")).replace(",","."));
         tarifa.classList.remove("none");
-
+        console.log((response.routes[0].legs[0].distance.text));
         var costo = distancia*1.75;
         if (costo < 4) {
           tarifa.innerHTML = "S/. 4";
         }
+        // console.log(costo);
 
         tarifa.innerHTML = "S/. " + parseInt(costo);
         directionsDisplay.setDirections(response);
