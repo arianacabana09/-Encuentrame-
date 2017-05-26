@@ -1,5 +1,12 @@
 #map{
-  background-color: rgb(201, 19, 141);
   width: 100%;
   height: 90vh;
+}
+
+div.container-fluid{
+  background-color: rgb(247, 182, 23);
+}
+
+.sizing{
+  width: 500px;
 }
