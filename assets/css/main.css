@@ -13,6 +13,11 @@ body{
   height: 90vh;
 }
 
+#tarifa{
+  font-size: 2rem;
+  color: white;
+}
+
 div.container-fluid{
   background-color: rgb(83, 162, 170);
 }
